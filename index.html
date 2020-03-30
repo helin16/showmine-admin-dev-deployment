@@ -1,5 +1,77 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="shmApp">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>ShowMine 商家 | Company backend</title>
+    <link rel="stylesheet/less" type="text/css" href="app/css/app.less" />
+    <link rel="stylesheet" type="text/css" href="app/css/note.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><!-- htmlbuild:vendorCss -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/9e0d051f59.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="app/css/vendor-7490dd5dbd.css"/>
+    <link rel="stylesheet" href="app/css/app.css"/>
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function(l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function(v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+</head>
+<!--<body ng-class="{'opened-in-wechat': openedInWechat}">-->
 <body>
-<h1>Prepare for CD</h1>
+    <div ng-if="false" style="width: 25rem; padding: 1rem; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%); position: absolute;">
+        <i class="fa fa-spinner fa-5x"></i>
+    </div>
+
+<!--    <opened-in-we-chat-checker></opened-in-we-chat-checker>-->
+    <div id='app-top' class="page-wrapper" ui-view ></div>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101510131-5"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-101510131-5');
+    </script>
+    <script src="app/js/vendor-f55c755e5c.js"></script>
+    <script src="app/js/app-5147cf5a0d.js"></script>
+    <script src="app/js/template-160d66cee5.js"></script>
+    <script src="app/js/language-285b60357b.js"></script>
 </body>
 </html>
